@@ -102,4 +102,10 @@ public class DemoController {
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
         return CommonResult.success(demoService.getBrand(id));
     }
+    @ApiOperation(value = "根据编号查询品牌信息2222test")
+    @RequestMapping(value = "/brand/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult<PmsBrand> brandtest(@PathVariable("id") Long id) {
+        return CommonResult.success(demoService.getBrand(id));
+    }
 }
