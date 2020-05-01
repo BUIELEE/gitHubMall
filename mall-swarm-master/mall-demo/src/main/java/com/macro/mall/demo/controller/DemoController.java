@@ -7,6 +7,7 @@ import com.macro.mall.demo.service.DemoService;
 import com.macro.mall.model.PmsBrand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ import java.util.List;
  */
 @Api(tags = "DemoController", description = "商品管理示例接口")
 @Controller
+@Slf4j
 public class DemoController {
     @Autowired
     private DemoService demoService;
@@ -102,10 +104,11 @@ public class DemoController {
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
         return CommonResult.success(demoService.getBrand(id));
     }
-    @ApiOperation(value = "根据编号查询品牌信息2222test")
+    @ApiOperation(value = "根据编号查询品牌信息3333333st")
     @RequestMapping(value = "/brand/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<PmsBrand> brandtest(@PathVariable("id") Long id) {
+
         return CommonResult.success(demoService.getBrand(id));
     }
 }
